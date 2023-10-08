@@ -109,7 +109,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.codewithfk.eventhub"
+    namespace = "com.codewithfk.food_diary"
     compileSdk = 33
     defaultConfig {
         minSdk = 24
@@ -125,5 +125,5 @@ dependencies {
     commonMainApi("dev.icerock.moko:mvvm-flow-compose:0.16.1")
 }
 multiplatformResources {
-    multiplatformResourcesPackage = "com.codewithfk.goodnight"
+    multiplatformResourcesPackage = "com.codewithfk.food_diary"
 }

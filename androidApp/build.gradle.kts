@@ -6,10 +6,10 @@ plugins {
 
 
 android {
-    namespace = "com.codewithfk.eventhub.android"
+    namespace = "com.codewithfk.food_diary.android"
     compileSdk = 34
     defaultConfig {
-        applicationId = "com.codewithfk.eventhub.android"
+        applicationId = "com.codewithfk.food_diary.android"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
