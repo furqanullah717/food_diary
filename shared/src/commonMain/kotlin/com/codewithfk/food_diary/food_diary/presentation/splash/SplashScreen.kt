@@ -1,4 +1,4 @@
-package com.codewithfk.eventhub.event.splash
+package com.codewithfk.food_diary.food_diary.presentation.splash
 
 import androidx.compose.animation.Animatable
 import androidx.compose.animation.core.tween

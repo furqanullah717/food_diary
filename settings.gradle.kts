@@ -29,6 +29,6 @@ dependencyResolutionManagement {
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
-rootProject.name = "EventHub-KMM"
+rootProject.name = "FoodWindow-KMM"
 include(":androidApp")
 include(":shared")

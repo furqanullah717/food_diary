@@ -31,7 +31,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import com.codewithfk.food_diary.core.presentation.stringResource
 import com.codewithfk.food_diary.di.AppModule
 import com.codewithfk.food_diary.food_diary.presentation.HomeScreen
-import com.codewithfk.eventhub.event.splash.SplashScreen
+import com.codewithfk.food_diary.food_diary.presentation.splash.SplashScreen
 import com.codewithfk.food_diary.theme.AppTheme
 import com.codewithfk.goodnight.MR
 import moe.tlaster.precompose.navigation.NavHost
