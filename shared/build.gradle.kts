@@ -67,6 +67,11 @@ kotlin {
                 implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:$serializationVersion")
+
+                //firebase dependencies
+                implementation("dev.gitlive:firebase-auth:1.10.0")
+                implementation("dev.gitlive:firebase-storage:1.10.0")
+                implementation("dev.gitlive:firebase-firestore:1.10.0")
             }
         }
         val commonTest by getting {

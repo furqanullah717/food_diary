@@ -28,12 +28,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.vector.ImageVector
+import com.codewithfk.food_diary.MR
 import com.codewithfk.food_diary.core.presentation.stringResource
 import com.codewithfk.food_diary.di.AppModule
 import com.codewithfk.food_diary.food_diary.presentation.HomeScreen
 import com.codewithfk.food_diary.food_diary.presentation.splash.SplashScreen
 import com.codewithfk.food_diary.theme.AppTheme
-import com.codewithfk.goodnight.MR
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.NavOptions
 import moe.tlaster.precompose.navigation.PopUpTo

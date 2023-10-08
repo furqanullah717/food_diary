@@ -14,7 +14,7 @@ import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.codewithfk.goodnight.MR
+import com.codewithfk.food_diary.MR
 import dev.icerock.moko.resources.compose.painterResource
 import kotlinx.coroutines.delay
 import moe.tlaster.precompose.lifecycle.Lifecycle
