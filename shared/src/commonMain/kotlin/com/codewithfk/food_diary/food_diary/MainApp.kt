@@ -22,6 +22,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -31,9 +32,12 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import com.codewithfk.food_diary.MR
 import com.codewithfk.food_diary.core.presentation.stringResource
 import com.codewithfk.food_diary.di.AppModule
-import com.codewithfk.food_diary.food_diary.presentation.HomeScreen
+import com.codewithfk.food_diary.food_diary.presentation.home.HomeScreen
+import com.codewithfk.food_diary.food_diary.presentation.login.LoginScreen
 import com.codewithfk.food_diary.food_diary.presentation.splash.SplashScreen
 import com.codewithfk.food_diary.theme.AppTheme
+import dev.gitlive.firebase.Firebase
+import dev.gitlive.firebase.initialize
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.NavOptions
 import moe.tlaster.precompose.navigation.PopUpTo
@@ -46,8 +50,6 @@ fun App(
     dynamicColor: Boolean,
     appModule: AppModule,
 ) {
-
-
     val navigator = rememberNavigator()
     AppTheme(
         darkTheme,
@@ -56,7 +58,7 @@ fun App(
         val home = stringResource(MR.strings.text_home)
         val showBottomBar = remember { mutableStateOf(false) }
         val selectedTab = remember { mutableStateOf(home) }
-        Scaffold( bottomBar = {
+        Scaffold(bottomBar = {
             AnimatedVisibility(
                 showBottomBar.value, enter = fadeIn(), exit = fadeOut()
             ) {
@@ -91,7 +93,7 @@ fun App(
                     destroyTransition = slideOutHorizontally()
                 ),
                 // The start destination
-                initialRoute = "/splash",
+                initialRoute = "/login",
             ) {
                 // Define a scene to the navigation graph
                 scene(
@@ -112,6 +114,14 @@ fun App(
                         onStart = {},
                         valid = true
                     )
+                }
+                scene(
+                    // Scene's route path
+                    route = "/login",
+                    // Navigation transition for this scene, this is optional
+                ) {
+                    showBottomBar.value = false
+                    LoginScreen()
                 }
                 scene(
                     // Scene's route path

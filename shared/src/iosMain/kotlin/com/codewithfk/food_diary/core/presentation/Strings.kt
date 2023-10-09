@@ -21,6 +21,6 @@ actual fun stringResource(
     id: StringResource,
     args: List<Any>
 ): String {
-    return com.codewithfk.food_diary.core.presentation.Strings().get(id, args)
+    return Strings().get(id, args)
 }
 

@@ -1,4 +1,4 @@
-package com.codewithfk.food_diary.food_diary.presentation
+package com.codewithfk.food_diary.food_diary.presentation.home
 
 import androidx.compose.runtime.Composable
 import com.codewithfk.food_diary.di.AppModule
