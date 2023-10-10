@@ -2,6 +2,8 @@ plugins {
     id("com.android.application")
     kotlin("android")
     id("org.jetbrains.compose")
+    id("com.google.gms.google-services")
+
 }
 
 
@@ -48,4 +50,6 @@ dependencies {
     implementation("androidx.compose.foundation:foundation:1.5.1")
     implementation("androidx.compose.material:material:1.5.1")
     implementation("androidx.activity:activity-compose:1.7.2")
+    implementation(platform("com.google.firebase:firebase-bom:30.0.1")) // This line to add the firebase bom
+    implementation("com.google.firebase:firebase-common-ktx:20.4.0")
 }

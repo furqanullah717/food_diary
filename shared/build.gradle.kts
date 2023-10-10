@@ -13,7 +13,7 @@ kotlin {
     android {
         compilations.all {
             kotlinOptions {
-                jvmTarget = "1.8"
+                jvmTarget = "17"
             }
         }
     }
@@ -68,10 +68,12 @@ kotlin {
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:$serializationVersion")
 
+                val firebaseVersion = "1.10.0"
                 //firebase dependencies
-                implementation("dev.gitlive:firebase-auth:1.10.0")
-                implementation("dev.gitlive:firebase-storage:1.10.0")
-                implementation("dev.gitlive:firebase-firestore:1.10.0")
+                implementation("dev.gitlive:firebase-common:$firebaseVersion")// This line
+                implementation("dev.gitlive:firebase-auth:$firebaseVersion")
+                implementation("dev.gitlive:firebase-storage:$firebaseVersion")
+                implementation("dev.gitlive:firebase-firestore:$firebaseVersion")
             }
         }
         val commonTest by getting {
@@ -119,7 +121,12 @@ android {
     defaultConfig {
         minSdk = 24
     }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
 }
+
 
 dependencies {
     implementation("androidx.core:core:1.10.1")
